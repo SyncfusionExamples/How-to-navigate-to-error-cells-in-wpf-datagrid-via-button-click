@@ -1,0 +1,57 @@
+﻿<Window x:Class="SfDataGridDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Syncfusion="http://schemas.syncfusion.com/wpf"
+        xmlns:local="clr-namespace:SfDataGridDemo"
+        Title="SfDataGrid Demo"
+        Width="1024"
+        Height="710"
+        Icon="App.ico"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <local:ViewModel />
+    </Window.DataContext>
+    <Window.Resources>
+        <local:ViewModel x:Key="viewmodel" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Syncfusion:SfDataGrid x:Name="datagrid"
+                               Grid.Row="0"
+                               AllowDraggingColumns="True"
+                               AllowEditing="True"
+                               AllowGrouping="True"
+                               AllowResizingColumns="True"
+                               AllowSorting="True"
+                               AutoGenerateColumns="True"
+                               HeaderRowHeight="40"
+                               GridValidationMode="InView"
+                               ItemsSource="{Binding EmployeesTable}"
+                               SelectionMode="Single"
+                               ShowGroupDropArea="True" 
+                               ShowRowHeader="True">
+        </Syncfusion:SfDataGrid>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Name="PreviousButton"
+                    Width="150"
+                    Height="30" Content="FindPrevious"
+                    Command="{Binding FindPreviousCommand}"
+                    CommandParameter="{Binding ElementName=datagrid}">
+            </Button>
+
+            <Button x:Name="NextButton"
+                    Width="150"
+                    Height="30" Content="FindNext"
+                    Command="{Binding FindNextCommand}"
+                    CommandParameter="{Binding ElementName=datagrid}">
+
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
