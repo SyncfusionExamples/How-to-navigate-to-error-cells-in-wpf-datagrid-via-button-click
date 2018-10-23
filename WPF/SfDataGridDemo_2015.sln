@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23103.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SfDataGridDemo_2013", "SfDataGridDemo_2013.csproj", "{3F9F9970-80A7-4BA9-BE3D-DAF7F75AFCFF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SfDataGridDemo_2015", "SfDataGridDemo_2015.csproj", "{3F9F9970-80A7-4BA9-BE3D-DAF7F75AFCFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
