@@ -1,4 +1,4 @@
-# Navigate to error cells in wpf datagrid via button click
+# How to navigate to error cells in WPF and UWP DataGrid (SfDataGrid) via button click?
 
 ## About the sample
 
